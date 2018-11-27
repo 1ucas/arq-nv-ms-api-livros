@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\LivrosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,8 +102,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LivrosApi.Models\LivrosApi.Models.csproj">
+      <Project>{A4E2FBED-A17F-444B-B2E2-2AA20E932041}</Project>
+      <Name>LivrosApi.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LivrosApi.Services\LivrosApi.Services.csproj">
+      <Project>{50BC5976-F614-4CF0-881A-9AD72A61EEEF}</Project>
+      <Name>LivrosApi.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
